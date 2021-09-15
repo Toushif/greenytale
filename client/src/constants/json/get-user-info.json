@@ -1,0 +1,62 @@
+{
+  "UserID": 8,
+  "FullName": "Haque, Toushif UL",
+  "Email": "toushif.haq@gmail.com",
+  "Country": null,
+  "City": null,
+  "Phone": null,
+  "CreatedUser": null,
+  "CreatedTime": null,
+  "UpdatedUser": null,
+  "UpdatedTime": null,
+  "Image": null,
+  "Roles": [
+    {
+      "RoleID": 12,
+      "Name": "CONSUMER",
+      "GroupName": "GreenPRoductionInternalTest",
+      "Precedence": "2",
+      "CreatedUser": "ADMIN",
+      "CreatedTime": null,
+      "UpdatedUser": "ADMIN",
+      "UpdatedTime": null,
+      "AppCustomer": "SAARAMCO",
+      "ActiveStatus": false
+    },
+    {
+      "RoleID": 12,
+      "Name": "EXTERNAL",
+      "GroupName": "GreenPRoductionInternalTest",
+      "Precedence": "3",
+      "CreatedUser": "ADMIN",
+      "CreatedTime": null,
+      "UpdatedUser": "ADMIN",
+      "UpdatedTime": null,
+      "AppCustomer": "SAARAMCO",
+      "ActiveStatus": false
+    },
+    {
+      "RoleID": 12,
+      "Name": "ADMIN",
+      "GroupName": "GreenPRoductionInternalTest",
+      "Precedence": "1",
+      "CreatedUser": "ADMIN",
+      "CreatedTime": null,
+      "UpdatedUser": "ADMIN",
+      "UpdatedTime": null,
+      "AppCustomer": "SAARAMCO",
+      "ActiveStatus": true
+    }
+  ],
+  "AppCustomers": [
+    {
+      "AppCustomerID": 3,
+      "Name": "ARAMCO",
+      "CustomerCode": "GREENPRODUCTION",
+      "CreatedUser": null,
+      "CreatedTime": null,
+      "UpdatedUser": null,
+      "UpdatedTime": null
+    }
+  ]
+}

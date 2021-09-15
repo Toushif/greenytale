@@ -1,0 +1,172 @@
+$background-color: #2A2E37;
+$search-bg-color: #242628;
+$icon-color: #00FEDE;
+$transition: all .5s ease;
+* {
+  box-sizing: border-box;
+}
+
+body {
+//   background: $background-color;
+}
+
+.search {
+  width: 100px;
+  height: 100px;
+  margin: 40px auto 0;
+  background-color: $search-bg-color;
+  position: relative;
+  overflow: hidden;
+  transition: $transition;
+  &:before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 100%;
+    position: relative;
+    background-color: $icon-color;
+    transition: $transition;
+  }
+  &.open {
+    width: 420px;
+    &:before {
+      height: 60px;
+      margin: 20px 0 20px 30px;
+      position: absolute;
+    }
+  }
+}
+
+
+.search-box {
+    width: 78%;
+    height: 100%;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    color: #fff;
+    padding: 20px 0px 20px 20px;
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    font-size: 32px;
+    &:focus {
+        outline: none;
+    }
+}
+
+.search-button {
+  width: 100px;
+  height: 100px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.search-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  border: 3px solid $icon-color;
+  display: block;
+  position: relative;
+  margin-left: 5px;
+  transition: $transition;
+  &:before {
+    content: '';
+    width: 3px;
+    height: 15px;
+    position: absolute;
+    right: -2px;
+    top: 30px;
+    display: block;
+    background-color: $icon-color;
+    transform: rotate(-45deg);
+    transition: $transition;
+  }
+  &:after {
+    content: '';
+    width: 3px;
+    height: 15px;
+    position: absolute;
+    right: -12px;
+    top: 40px;
+    display: block;
+    background-color: $icon-color;
+    transform: rotate(-45deg);
+    transition: $transition;
+  }
+  .open & {
+    margin: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    &:before {
+      transform: rotate(52deg);
+      right: 22px;
+      top: 23px;
+      height: 18px;
+    }
+    &:after {
+      transform: rotate(-230deg);
+      right: 22px;
+      top: 13px;
+      height: 18px;
+    }
+  }
+}
+
+.discovery-main {
+    background: #fffae4;
+    margin-top: 4rem !important;
+}
+
+.watson-atmosphere article {
+    background: url(../../assets/images/watson2.jpg) no-repeat 0 5px !important;
+    background-size: 375px !important;
+
+    .watson-learn {
+        color: blue;
+        font-weight: bold;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.watson-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: center;
+
+    aside {
+        border: 1px solid #eee;
+        text-align: left;
+        box-shadow: RGB(26 102 63 / 25%) 0px 25px 50px -12px;
+
+        h3 {
+            color: #000;
+        }
+    }
+    span.read-more {
+        font-weight: bold;
+        cursor: pointer;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .no-result-found {
+        margin-top: 3rem;
+        font-size: 18px;
+        color: #000;
+        font-weight: bold;
+    }
+}

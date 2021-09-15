@@ -1,0 +1,62 @@
+{
+    "user_ID": "0e3bbd90-eef0-11eb-ae91-13308e976126",
+    "user_name": "swadhin.m",
+    "password": "r1421o8y4",
+    "email": "swadhin.mukherjee@gmai.com",
+    "full_name": "Swadhin Mukherjee",
+    "dob": "01/02/1913",
+    "gender": "M",
+    "secure_login_recovery": {},
+    "street_address_1": "GHE Street",
+    "street_address_2": "Street T",
+    "city": "Kolkata",
+    "state": "WB",
+    "zip": "700036",
+    "country": "India",
+    "role": [
+        {
+            "RoleID": 1,
+            "Name": "CONSUMER",
+            "GroupName": "GreenProductionInternalTest",
+            "Precedence": 2,
+            "CreatedTime": "2021-07-27T15:33:56.330Z",
+            "UpdatedTime": "2021-07-27T15:33:56.330Z",
+            "AppCustomer": "GREENYTALE",
+            "ActiveStatus": true
+        },
+        {
+            "RoleID": 2,
+            "Name": "SELLER",
+            "GroupName": "GreenProductionInternalTest",
+            "Precedence": 3,
+            "CreatedTime": "2021-07-27T15:33:56.330Z",
+            "UpdatedTime": "2021-07-27T15:33:56.330Z",
+            "AppCustomer": "GREENYTALE",
+            "ActiveStatus": false
+        },
+        {
+            "RoleID": 3,
+            "Name": "EXTERNAL",
+            "GroupName": "GreenProductionInternalTest",
+            "Precedence": 4,
+            "CreatedTime": "2021-07-27T15:33:56.330Z",
+            "UpdatedTime": "2021-07-27T15:33:56.330Z",
+            "AppCustomer": "GREENYTALE",
+            "ActiveStatus": false
+        },
+        {
+            "RoleID": 4,
+            "Name": "ADMIN",
+            "GroupName": "GreenProductionInternalTest",
+            "Precedence": 1,
+            "CreatedTime": "2021-07-27T15:33:56.330Z",
+            "UpdatedTime": "2021-07-27T15:33:56.330Z",
+            "AppCustomer": "GREENYTALE",
+            "ActiveStatus": false
+        }
+    ],
+    "sold_product_ID": [],
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJzd2FkaGluLm0iLCJwYXNzd29yZCI6InIxNDIxbzh5NCIsImlhdCI6MTYyNzQwMDAzNiwiZXhwIjoxNjI3NDg2NDM2fQ.VZFyMVhfEzPhX3G87SY1Om4ta-yRaqEawiUSpnDrk08",
+    "created_dt": "2021-07-27T15:33:56.330Z",
+    "updated_dt": "2021-07-27T15:33:56.330Z"
+}

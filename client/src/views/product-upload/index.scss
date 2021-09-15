@@ -1,0 +1,51 @@
+
+.upload-wrapper {
+    .input-child {
+        width: 50%;
+        padding: 0 1rem;
+        text-align: left;
+    }
+
+    .input-child-dd .form-group {
+        display: flex;
+        flex-direction: column;
+        select {
+            height: 2.4rem;
+        }
+    }
+    .outer-child {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .error-body, .success-body {
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #530303;
+        font-weight: bold;
+        background: #faecec;
+        margin: 1rem;
+    }
+    .success-body {
+        color: #0e3610;
+        background: #c8fac3;
+    }
+}
+
+.seller-page {
+    .account-btn {
+
+    }
+    .account-btn > button {
+        border: none;
+        outline: none;
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        &:hover {
+            background: #0e7b8b;
+        }
+    }
+}

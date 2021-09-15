@@ -1,0 +1,54 @@
+@mixin logo-width($logo-width) {
+	width: $logo-width;
+}
+
+@mixin width-height($width-height) {
+	width: $width-height;
+	height: $width-height;
+}
+
+@mixin width-height-d($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+@mixin cross-browser-transition($time) {
+	-webkit-transform: scale($time);
+    transform: scale($time);
+    -webkit-transition: all .2s cubic-bezier(.15,.69,.83,.67);
+    transition: all .2s cubic-bezier(.15,.69,.83,.67);
+}
+
+@mixin border-fields($width-top, $width-right, $width-bottom, $width-left) {
+	border-top: $width-top;
+	border-right: $width-right;
+	border-bottom: $width-bottom;
+	border-left: $width-left;
+}
+
+@mixin margin-fields($margin-top, $margin-right, $margin-bottom, $margin-left) {
+	margin-top: $margin-top;
+	margin-right: $margin-right;
+	margin-bottom: $margin-bottom;
+	margin-left: $margin-left;
+}
+
+@mixin padding-fields($padding-top, $padding-right, $padding-bottom, $padding-left) {
+	padding-top: $padding-top;
+	padding-right: $padding-right;
+	padding-bottom: $padding-bottom;
+	padding-left: $padding-left;
+}
+
+@mixin position-xy($position, $top, $right, $bottom, $left) {
+	position: $position;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+@mixin bg-position-xy($position-x, $position-y) {
+	background-position-x: $position-x;
+	background-position-y: $position-y;
+}

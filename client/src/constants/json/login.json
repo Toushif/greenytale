@@ -1,0 +1,67 @@
+{
+    "user_ID": "02c8e2f0-eafc-11eb-bffb-adf8fe07f4e0",
+    "user_name": "aleem.sheik",
+    "password": "usertest12341asd",
+    "email": "aleem.sheik@gmai.com",
+    "full_name": "Aleem Sheik 3",
+    "dob": "01/02/1923",
+    "gender": "M",
+    "secure_login_recovery": [
+        {
+            "security_question_ID": "1",
+            "secure_answer": "Hyderabad"
+        }
+    ],
+    "street_address_1": "XYZ Street",
+    "street_address_2": "Street H",
+    "city": "Hyderabad",
+    "state": "TS",
+    "zip": "500015",
+    "country": "India",
+    "role": [
+        {
+            "RoleID": 1,
+            "Name": "CONSUMER",
+            "GroupName": "GreenProductionInternalTest",
+            "Precedence": "2",
+            "CreatedTime": "2021-07-22T14:48:10.566Z",
+            "UpdatedTime": "2021-07-22T14:48:10.566Z",
+            "AppCustomer": "GREENYTALE",
+            "ActiveStatus": true
+        },
+        {
+            "RoleID": 2,
+            "Name": "SELLER",
+            "GroupName": "GreenProductionInternalTest",
+            "Precedence": "3",
+            "CreatedTime": "2021-07-22T14:48:10.566Z",
+            "UpdatedTime": "2021-07-22T14:48:10.566Z",
+            "AppCustomer": "GREENYTALE",
+            "ActiveStatus": false
+        },
+        {
+            "RoleID": 3,
+            "Name": "EXTERNAL",
+            "GroupName": "GreenProductionInternalTest",
+            "Precedence": "4",
+            "CreatedTime": null,
+            "UpdatedTime": null,
+            "AppCustomer": "GREENYTALE",
+            "ActiveStatus": false
+        },
+        {
+            "RoleID": 4,
+            "Name": "ADMIN",
+            "GroupName": "GreenProductionInternalTest",
+            "Precedence": "1",
+            "CreatedTime": "2021-07-22T14:48:10.566Z",
+            "UpdatedTime": "2021-07-22T14:48:10.566Z",
+            "AppCustomer": "GREENYTALE",
+            "ActiveStatus": false
+        }
+    ],
+    "sold_product_ID": [],
+    "created_dt": "2021-07-22T14:49:26.431Z",
+    "updated_dt": "2021-07-23T16:29:59.094Z",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFsZWVtLnNoZWlrIiwicGFzc3dvcmQiOiJ1c2VydGVzdDEyMzQxYXNkIiwiaWF0IjoxNjI3Mzk5ODg0LCJleHAiOjE2Mjc0ODYyODR9.QBC42N6QnXXMy81tajwEMQPxVeGpVwu0ZaGUjATTeZA"
+}

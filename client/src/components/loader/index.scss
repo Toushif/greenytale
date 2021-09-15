@@ -1,0 +1,44 @@
+@import '../../styles/_variables';
+@import '../../styles/mixins/_mixin';
+
+.progress-indicator {
+  @include position-xy(absolute, 0, 0, 0, 0);
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  background: url('../../assets/images/loader_global.png') no-repeat;
+  background-size: 100%;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.loading-content {
+  @include position-xy(fixed, 0, 0, 0, 0);
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 999999;
+}
+
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
