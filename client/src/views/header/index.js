@@ -15,71 +15,19 @@ import climate5 from "assets/images/climate5.jpg";
 import climate6 from "assets/images/climate6.jpg";
 import "./index.scss";
 
-/**
- * Component that alerts if you click outside of it
- */
-// class OutsideClick extends Component {
-//     constructor(props) {
-//         super(props);
-
-//         this.setWrapperRef = this.setWrapperRef.bind(this);
-//         this.handleClickOutside = this.handleClickOutside.bind(this);
-
-//         this.state = {
-//             clicked: false
-//         }
-//     }
-
-//     componentDidMount() {
-//         document.addEventListener('mousedown', this.handleClickOutside);
-//     }
-
-//     componentWillUnmount() {
-//         document.removeEventListener('mousedown', this.handleClickOutside);
-//     }
-
-//     /**
-//      * Set the wrapper ref
-//      */
-//     setWrapperRef(node) {
-//         // this.wrapperRef = node;
-//     }
-
-//     /**
-//      * Alert if clicked on outside of element
-//      */
-//     handleClickOutside(event) {
-//         /*if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
-//             this.setState({clicked: true});
-//             this.props.hideDropdown();
-//         } else {
-//             this.setState({clicked: false});
-//         }*/
-//     }
-
-//     render() {
-//         return (
-//             <div ref={this.setWrapperRef} className={"dropdown-wrapper"}>
-//                 {this.props.children}
-//             </div>
-//         );
-//     }
-// }
 
 class Header extends Component {
     static contextType = AuthContext;
     constructor(props) {
         super(props);
         this.state = {
-            pageLoading: true,
+            pageLoading: false,
             search: "",
         };
     }
 
     componentDidMount() {
-        setTimeout(() => {
-            this.setState({ pageLoading: false });
-        }, 400);
+        const { isSeller } = this.context;
     }
 
     successResponseGoogle = () => {

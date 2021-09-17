@@ -111,7 +111,7 @@ class Login extends Component {
 
     resetForm() {
         const { formData } = this.state;
-        console.log(formData, this.state);
+        // console.log(formData, this.state);
         for (let key in formData) {
             this.setState({
                 [key]: "",
@@ -154,13 +154,16 @@ class Login extends Component {
     };
 
     loginSuccess = (res, googleRes = "") => {
-        const { dispatch, jwtDispatch, userDispatch } = this.context;
+        const { dispatch, jwtDispatch, dispatchSeller, userDispatch } = this.context;
 
         dispatch({ type: "LOGIN-LOGOUT" });
         jwtDispatch({ type: "JWT-TOKEN", token: res.token });
         delete res.token;
         res.imgUrl = googleRes?.profileObj?.imageUrl;
+        const isSeller = res.role.find(seller => seller.Name === "SELLER")['ActiveStatus']
+        dispatchSeller({ type: 'IS-SELLER', res: isSeller })
         userDispatch({ type: "USER-DETAILS", res });
+
         this.props.history.push("/");
     };
 

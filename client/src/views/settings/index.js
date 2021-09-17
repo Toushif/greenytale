@@ -29,11 +29,12 @@ class Settings extends Component {
         if (!isAuthenticated) {
             this.props.history.push("/login");
         }
+        window.scrollTo(0, 280);
 
         if (this.props.history?.location?.param === "security") {
             this.security.current.click();
         } else {
-            window.scrollTo(0, this.profile.current.offsetTop + 100);
+            // window.scrollTo(0, this.profile.current.offsetTop + 100);
         }
     }
 

@@ -21,6 +21,7 @@ const AuthContextProvider = (props) => {
         return !!data;
     });
     const [isAdmin, dispatchAdmin] = useReducer(authReducer, false);
+    const [productId, dispatchProductId] = useReducer(authReducer, null);
 
     useEffect(() => {
         sessionStorage.setItem("isAuthenticated", isAuthenticated);
@@ -48,13 +49,15 @@ const AuthContextProvider = (props) => {
                 isSeller,
                 isAdmin,
                 searchText,
+                productId,
                 dispatch,
                 jwtDispatch,
                 userDispatch,
                 dispatchSeller,
                 dispatchAdmin,
                 dispatchWatsonDiscovery,
-                dispatchSearch
+                dispatchSearch,
+                dispatchProductId
             }}
         >
             {props.children}

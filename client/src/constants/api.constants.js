@@ -8,6 +8,7 @@ const appSettings = {
     newProduct: "newProduct",
     allProduct: "allProduct",
     searchProducts: "searchProducts",
+    productInfo: "productInfo",
 };
 
 export default appSettings;

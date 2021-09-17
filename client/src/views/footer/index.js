@@ -77,7 +77,7 @@ class Footer extends Component {
                         <li><a href="/">Contact</a></li>
                     </ul>
 
-                    <p className="text-center">Copyright @2017 | <a href="javascript:void(0)">Green Production</a></p>
+                    <p className="text-center">Copyright @2021 | <a href="javascript:void(0)">Green Production</a></p>
 
                     <ul className="social_footer_ul">
                         <li><a href="/"><i className="fab fa-facebook-f"></i></a></li>

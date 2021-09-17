@@ -95,8 +95,9 @@ const Main = (props) => {
                 <Route
                     exact
                     path="/product/:id"
-                    render={() => (
+                    render={(prop) => (
                         <PrivateRoute
+                            {...prop}
                             user={roles}
                             context={context} 
                             allowed={[1, 2, 3, 4]}

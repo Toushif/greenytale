@@ -54,6 +54,12 @@ const RelativeAPI = [
         RelativeUrl: "/products/search-product",
     },
     {
+        ApiName: "productInfo",
+        Type: "greenytale",
+        MockUrl: "/deleteUser.json",
+        RelativeUrl: "/products/product-info",
+    },
+    {
         ApiName: "enriched_text.entities.text:",
         Type: "greenytale",
         MockUrl: "/search.json",

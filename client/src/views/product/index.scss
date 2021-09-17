@@ -1,0 +1,21 @@
+.product-wrapper {
+    margin: 4rem 4rem;
+
+    .card-img-top {
+        border-top-left-radius: calc(.5rem - 1px);
+        border-top-right-radius: calc(.5rem - 1px);
+    }
+    .boldStyle {
+        font-weight: bold;
+    }
+    .card button {
+        background-color: #007eff;
+        a {
+            color: #fff !important;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}

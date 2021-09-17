@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import photoSeating from 'assets/images/photo_seating.jpg'
-import photoLight from 'assets/images/photo_lighting.jpg'
 import Core from "../../services/core";
+import arrayBufferToBase64 from "../../utils/btb64";
 import handleError from "../../services/errorHandler";
-import Loading from "components/loader/index";
+import GlobalSkeletonLoader from "components/loader/global-skeleton-loader";
 import "./index.scss";
 import "../home/index.scss";
 import { Link } from "react-router-dom";
@@ -29,17 +28,6 @@ class Dashboard extends Component {
         this.getSellerProducts()
     }
 
-    arrayBufferToBase64( buffer ) {
-        let binary = '';
-        const bytes = new Uint8Array( buffer );
-        const len = bytes.byteLength;
-        for (let i = 0; i < len; i++) {
-            binary += String.fromCharCode( bytes[ i ] );
-        }
-        return window.btoa( binary );
-
-    }
-
     async getSellerProducts() {
         this.setState({ pageLoading: true });
         try {
@@ -59,16 +47,16 @@ class Dashboard extends Component {
         console.log('res', res, search)
         const response = res.data ? res.data : res
         const store = response.map((item, ind) => {
-            if(ind < 100) {
-                const buffer = this.arrayBufferToBase64(item?.image_buffer?.data);
-                const imga = 'data:image/png;base64,' + buffer
+            if(ind < 20) {
+                const img = arrayBufferToBase64(item?.image_buffer?.data);
+                const path = `/product/${item.product_ID}`
                 return (
                     <div className="product" key={ind}>
-                        <Link to="/product" title="Product">
+                        <Link to={path} title="Product">
                             <div className="image-box">
                                 <div className="images">
                                     <img
-                                        src={imga}
+                                        src={img}
                                         alt="product_img"
                                     />
                                 </div>
@@ -114,11 +102,11 @@ class Dashboard extends Component {
     }
 
     render() {
-        const {searchText} = this.props.context
+        const { searchText } = this.props.context
         console.log('searchText', searchText)
         return (
             <div className="listing-section">
-                {this.state.pageLoading ? <Loading /> : ""}
+                {this.state.pageLoading ? <GlobalSkeletonLoader count="2"/> : ""}
                 {this.state.productsList}
             </div>
         );

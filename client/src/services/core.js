@@ -37,6 +37,10 @@ const Core = {
     searchProducts(data) {
         return httpService.post(appSettings.searchProducts, data);
     },
+
+    productInfo(data) {
+        return httpService.post(appSettings.productInfo, data);
+    },
 };
 
 export default Core;
