@@ -37,7 +37,7 @@ class Product extends Component {
         try {
             const request = {
                 product_ID: this.props.match?.params?.id
-            }
+            } 
             const res = await Core.productInfo(request);
             if (res) {
                 this.setState({product: res})
