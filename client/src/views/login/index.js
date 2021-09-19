@@ -6,6 +6,7 @@ import Core from "../../services/core";
 import handleError from "../../services/errorHandler";
 import Loading from "components/loader/index";
 import { InputForm, Dropdown } from "../../components/form-inputs/index";
+import logo from "assets/images/greenytale_1.png";
 import "./index.scss";
 
 const recaptchaRef = React.createRef();
@@ -171,11 +172,18 @@ class Login extends Component {
         console.log(err);
     };
 
+    goToHP = () => {
+        this.props.history.push("/");
+    }
+
     render() {
         const {isLogin, isError, errorMsg, pageLoading} = this.state
         return (
             <div>
                 {pageLoading ? <Loading /> : ""}
+                <div className="login-logo" onClick={this.goToHP}>
+                    <img src={logo} alt="logo" />
+                </div>
                 <div className="signup__container" style={{height: isLogin ? '30rem' : '33rem'}}>
                     <div className="container__child signup__thumbnail">
                         <div className="thumbnail__content text-center">

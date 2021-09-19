@@ -8,7 +8,7 @@ const GlobalSkeletonLoader = props => {
                 <ul className="o-vertical-spacing o-vertical-spacing--l">
                 {
                     Array.from(Array(count)).map(a => {
-                        return <li className="blog-post o-media">
+                        return <li key={a} className="blog-post o-media">
                             <div className="o-media__figure">
                                 <span
                                     className="skeleton-box"

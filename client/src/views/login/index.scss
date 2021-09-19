@@ -24,6 +24,20 @@
     height: remy(480px);
     border-radius: remy(3px);
     box-shadow: 0px remy(3px) remy(7px) rgba(0,0,0,.25);
+
+  }
+  .login-logo {
+    height: 4rem;
+    position: absolute;
+    width: 10rem;
+    overflow: hidden;
+
+    img {
+      width: 12rem;
+      margin-left: -1rem;
+      margin-top: -2rem;
+      cursor: pointer;
+    }
   }
   .signup__overlay {
     position: absolute;
