@@ -117,8 +117,12 @@ li.home-cart {
     position: absolute;
     font-size: 24px;
     z-index: 100;
-    top: 5px;
+    top: 8px;
     right: 10rem;
+
+    a {
+        padding: 8px 20px 0 20px;
+    }
 }
 .header-search {
     display: flex;
