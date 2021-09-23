@@ -118,7 +118,7 @@ class SellerUpload extends Component {
                                                 <img
                                                     src={this.state.userImg}
                                                     className="img-radius"
-                                                    alt="User-Profile-Image"
+                                                    alt="User-img"
                                                 />
                                             </div>
                                             <h6 className="f-w-600">
