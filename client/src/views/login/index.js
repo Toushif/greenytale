@@ -45,8 +45,8 @@ class Login extends Component {
     }
 
     handleSubmit = async (e) => {
-        e.preventDefault(); 
-        this.setState({isError: false})
+        e.preventDefault();
+        this.setState({ isError: false });
         const data = new FormData(e.target);
 
         const value = Object.fromEntries(data.entries());
@@ -82,13 +82,19 @@ class Login extends Component {
 
         this.setState({ pageLoading: true });
         try {
-            const res = await Core[this.state.isLogin ? 'loginService' : 'signupService'](request);
+            const res = await Core[
+                this.state.isLogin ? "loginService" : "signupService"
+            ](request);
             if (res) {
                 this.loginSuccess(res);
             }
         } catch (error) {
-            this.setState({isError: true})
-            this.setState({errorMsg: "Error while registering. Try again."})
+            this.setState({ isError: true });
+            this.setState({
+                errorMsg: this.state.isLogin
+                    ? "Invalid username or password"
+                    : "Error while registering. Try again.",
+            });
             handleError(error);
         }
         this.setState({ pageLoading: false });
@@ -106,7 +112,7 @@ class Login extends Component {
         this.setState((prevState) => ({ isLogin: !prevState.isLogin }));
         recaptchaRef.current.reset();
         this.setState({ captchaToken: null });
-        this.setState({isError: false})
+        this.setState({ isError: false });
         this.resetForm();
     };
 
@@ -125,12 +131,12 @@ class Login extends Component {
     captchaChange = (e) => {
         const captchaToken = recaptchaRef.current.getValue();
         this.setState({ captchaToken });
-        this.setState({isError: false})
+        this.setState({ isError: false });
         // console.log("token", captchaToken);
     };
 
     successResponseGoogle = async (googleRes) => {
-        this.setState({isError: false})
+        this.setState({ isError: false });
         const token = googleRes.getAuthResponse().id_token;
 
         const request = {
@@ -147,22 +153,25 @@ class Login extends Component {
                 this.loginSuccess(res, googleRes);
             }
         } catch (error) {
-            this.setState({isError: true})
-            this.setState({errorMsg: "Invalid username or password"})
+            this.setState({ isError: true });
+            this.setState({ errorMsg: "Invalid username or password" });
             handleError(error);
         }
         this.setState({ pageLoading: false });
     };
 
     loginSuccess = (res, googleRes = "") => {
-        const { dispatch, jwtDispatch, dispatchSeller, userDispatch } = this.context;
+        const { dispatch, jwtDispatch, dispatchSeller, userDispatch } =
+            this.context;
 
         dispatch({ type: "LOGIN-LOGOUT" });
         jwtDispatch({ type: "JWT-TOKEN", token: res.token });
         delete res.token;
         res.imgUrl = googleRes?.profileObj?.imageUrl;
-        const isSeller = res.role.find(seller => seller.Name === "SELLER")['ActiveStatus']
-        dispatchSeller({ type: 'IS-SELLER', res: isSeller })
+        const isSeller = res.role.find((seller) => seller.Name === "SELLER")[
+            "ActiveStatus"
+        ];
+        dispatchSeller({ type: "IS-SELLER", res: isSeller });
         userDispatch({ type: "USER-DETAILS", res });
 
         this.props.history.push("/");
@@ -174,17 +183,20 @@ class Login extends Component {
 
     goToHP = () => {
         this.props.history.push("/");
-    }
+    };
 
     render() {
-        const {isLogin, isError, errorMsg, pageLoading} = this.state
+        const { isLogin, isError, errorMsg, pageLoading } = this.state;
         return (
             <div>
                 {pageLoading ? <Loading /> : ""}
                 <div className="login-logo" onClick={this.goToHP}>
                     <img src={logo} alt="logo" />
                 </div>
-                <div className="signup__container" style={{height: isLogin ? '30rem' : '33rem'}}>
+                <div
+                    className="signup__container"
+                    style={{ height: isLogin ? "30rem" : "33rem" }}
+                >
                     <div className="container__child signup__thumbnail">
                         <div className="thumbnail__content text-center">
                             <h3 className="heading--secondary">
@@ -195,12 +207,14 @@ class Login extends Component {
                         <div className="signup__overlay"></div>
                     </div>
                     <div className="container__child signup__form">
-                        {
-                            isError && 
-                            <div className="error-message" style={{top: isLogin ? '7%' : '0'}}>
+                        {isError && (
+                            <div
+                                className="error-message"
+                                style={{ top: isLogin ? "7%" : "0" }}
+                            >
                                 {errorMsg}
                             </div>
-                        }
+                        )}
                         <div className="formWrapper">
                             <form onSubmit={this.handleSubmit}>
                                 {this.state.isLogin ? (
@@ -344,11 +358,7 @@ class Login extends Component {
                                         className="btn btn--form"
                                         type="submit"
                                         disabled={!this.state.captchaToken}
-                                        value={
-                                            isLogin
-                                                ? "Login"
-                                                : "Register"
-                                        }
+                                        value={isLogin ? "Login" : "Register"}
                                     />
                                 </div>
                                 {isLogin && (
