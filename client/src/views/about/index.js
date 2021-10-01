@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/authContext";
 import aboutVideo from "assets/images/greenytale-about.mp4";
+import Toushif from "assets/images/preview.jpg";
 import "./index.scss";
 
 class AboutUs extends Component {
@@ -83,35 +83,8 @@ class AboutUs extends Component {
                             <div className="w4-fourth">
                                 <p>TOUSHIF</p>
                                 <img
-                                    src="/w3images/bandmember.jpg"
+                                    src={Toushif}
                                     className="w3-round w3-margin-bottom"
-                                    alt="Img"
-                                    style={{width:'60%'}}
-                                />
-                            </div>
-                            <div className="w4-fourth">
-                                <p>SOHAM</p>
-                                <img
-                                    src="/w3images/bandmember.jpg"
-                                    className="w3-round w3-margin-bottom"
-                                    alt="Img"
-                                    style={{width:'60%'}}
-                                />
-                            </div>
-                            <div className="w4-fourth">
-                                <p>SOUMYA</p>
-                                <img
-                                    src="/w3images/bandmember.jpg"
-                                    className="w3-round"
-                                    alt="Img"
-                                    style={{width:'60%'}}
-                                />
-                            </div>
-                            <div className="w4-fourth">
-                                <p>ALEEM</p>
-                                <img
-                                    src="/w3images/bandmember.jpg"
-                                    className="w3-round"
                                     alt="Img"
                                     style={{width:'60%'}}
                                 />
