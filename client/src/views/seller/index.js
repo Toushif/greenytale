@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Core from "../../services/core";
 import handleError from "../../services/errorHandler";
-import Loading from "components/loader/index";
+import GlobalSkeletonLoader from "components/loader/global-skeleton-loader";
 import "./index.scss";
 import { Link } from "react-router-dom";
 
@@ -90,7 +90,6 @@ class Seller extends Component {
 
         return (
             <div className="seller-page">
-                {this.state.pageLoading ? <Loading /> : ""}
                 <h1 className="page-settings-header">Seller Account</h1>
                 <div className="page-content page-container" id="page-content">
                     <div className="row d-flex justify-content-center">
@@ -133,7 +132,7 @@ class Seller extends Component {
                                             </button>
                                             <hr />
                                             <div className="row listing-section">
-                                                {this.state.productsList}
+                                                {this.state.pageLoading ? <GlobalSkeletonLoader count="2" /> : this.state.productsList}
                                             </div>
                                         </div>
                                     </div>

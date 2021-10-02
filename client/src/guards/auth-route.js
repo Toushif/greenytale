@@ -9,7 +9,7 @@ function isUserAllowed(rest) {
 const PrivateRoute = ({ component: Component, ...rest }) => {
     const isAllowed = rest.user !== null && isUserAllowed(rest)
     return isAllowed ? 
-        (<Suspense fallback={GlobalSkeletonLoader}>
+        (<Suspense fallback={<GlobalSkeletonLoader count="2" />}>
             <Component {...rest}/>
         </Suspense>)
         :

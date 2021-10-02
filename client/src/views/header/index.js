@@ -137,14 +137,14 @@ class Header extends Component {
                         </li>
                         {isSeller && (
                             <li>
-                                <a
+                                <Link
                                     title="Design Corner"
-                                    href="javascript:void(0)"
+                                    to={''}
                                     aria-haspopup="true"
                                     onClick={this.onClick}
                                 >
                                     Seller Corner
-                                </a>
+                                </Link>
                                 <ul>
                                     <li>
                                         <Link

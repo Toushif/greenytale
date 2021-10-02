@@ -29,6 +29,7 @@
   },
   "scripts": {
     "start": "node server/index.js",
+    "heroku-postbuild": "cd client && npm install && npm run build",
     "dev": "env-cmd -f ./config/dev.env nodemon --experimental-modules server/index.js"
   },
   "author": "",
