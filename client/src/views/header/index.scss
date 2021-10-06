@@ -124,8 +124,12 @@ li.home-cart {
         padding: 8px 20px 0 20px;
     }
 }
+.lazy-load-image-background.blur.lazy-load-image-loaded {
+    width: 100% !important;
+}
 .header-search {
     display: flex;
+
 
     .choices-single-defaul {
         height: 42px;

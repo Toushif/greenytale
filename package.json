@@ -10,6 +10,7 @@
     "express-generator": "^4.16.1",
     "faker": "^5.5.3",
     "fastify": "^3.19.1",
+    "fastify-compress": "^3.6.0",
     "fastify-cors": "^6.0.2",
     "fastify-jwt": "^3.0.0",
     "fastify-multer": "^2.0.2",

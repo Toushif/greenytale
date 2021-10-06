@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import Core from "../../services/core";
 import arrayBufferToBase64 from "../../utils/btb64";
 import handleError from "../../services/errorHandler";
@@ -55,10 +57,14 @@ class Dashboard extends Component {
                         <Link to={path} title="Product">
                             <div className="image-box">
                                 <div className="images">
-                                    <img
+                                    <LazyLoadImage
+                                        alt={'product_img'}
+                                        effect="blur"
+                                        src={img} />
+                                    {/* <img
                                         src={img}
                                         alt="product_img"
-                                    />
+                                    /> */}
                                 </div>
                             </div>
                         </Link>

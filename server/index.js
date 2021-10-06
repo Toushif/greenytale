@@ -11,6 +11,17 @@ import path, { dirname } from 'path'
 fastify.register(jwt, {
     secret: process.env.JWT_SECRET_KEY,
 });
+fastify.register(
+  import('fastify-compress'),
+  { requestEncodings: ['br'] }
+);
+
+fastify.get('*.js', (req, res, next) => {
+  req.url = req.url + '.br';
+  res.header('Content-Encoding', 'br');
+  res.header('Content-Type', 'application/javascript; charset=UTF-8');
+  next();
+});
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -21,7 +32,9 @@ fastify.register(import('fastify-static'), {
 
 fastify.get('/:xx', async (request, reply) => {
   try {
-    return reply.sendFile('index.html')
+    return reply
+      .header('Accept-Encoding', 'application/json; charset=utf-8')
+      .sendFile('index.html')
   } catch (e) {
     console.log(e)
   }

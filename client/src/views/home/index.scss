@@ -26,6 +26,10 @@
             height: 100%;
         }
     }
+
+    .lazy-load-image-background.blur.lazy-load-image-loaded {
+        height: 100% !important;
+    }
     
     .product:hover {
       box-shadow: 1.5px 1.5px 2.5px 3px rgba(0, 0, 0, 0.4);

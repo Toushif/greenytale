@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { FaUserAlt, FaSearch, FaShoppingCart } from "react-icons/fa";
 import GoogleLogout from "react-google-login";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -85,25 +87,53 @@ class Header extends Component {
                         interval={5000}
                     >
                         <div>
-                            <img src={banner} alt="banner image" />
+                            <LazyLoadImage
+                                alt={'banner image'}
+                                effect="blur"
+                                src={banner} />
+                            {/* <img src={banner} alt="banner image" /> */}
                         </div>
                         <div>
-                            <img src={climate1} alt="climate image" />
+                            <LazyLoadImage
+                                alt={'banner image'}
+                                effect="blur"
+                                src={climate1} />
+                            {/* <img src={climate1} alt="climate image" /> */}
                         </div>
                         <div>
-                            <img src={climate4} alt="climate image" />
+                            <LazyLoadImage
+                                alt={'banner image'}
+                                effect="blur"
+                                src={climate4} />
+                            {/* <img src={climate4} alt="climate image" /> */}
                         </div>
                         <div>
-                            <img src={climate2} alt="climate image" />
+                            <LazyLoadImage
+                                alt={'banner image'}
+                                effect="blur"
+                                src={climate2} />
+                            {/* <img src={climate2} alt="climate image" /> */}
                         </div>
                         <div>
-                            <img src={climate5} alt="climate image" />
+                            <LazyLoadImage
+                                alt={'banner image'}
+                                effect="blur"
+                                src={climate5} />
+                            {/* <img src={climate5} alt="climate image" /> */}
                         </div>
                         <div>
-                            <img src={climate3} alt="climate image" />
+                            <LazyLoadImage
+                                alt={'banner image'}
+                                effect="blur"
+                                src={climate3} />
+                            {/* <img src={climate3} alt="climate image" /> */}
                         </div>
                         <div>
-                            <img src={climate6} alt="climate image" />
+                            <LazyLoadImage
+                                alt={'banner image'}
+                                effect="blur"
+                                src={climate6} />
+                            {/* <img src={climate6} alt="climate image" /> */}
                         </div>
                     </Carousel>
                 )}

@@ -225,7 +225,7 @@ class Login extends Component {
                                             value={
                                                 this.state.formData.user_name
                                             }
-                                            placeholder="Enter your username/ email"
+                                            placeholder="Enter your username/email"
                                             changeFn={this.handleInputChange}
                                             isRequired={true}
                                         />
