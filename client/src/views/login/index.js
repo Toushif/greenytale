@@ -81,6 +81,7 @@ class Login extends Component {
               };
 
         this.setState({ pageLoading: true });
+        
         try {
             const res = await Core[
                 this.state.isLogin ? "loginService" : "signupService"
