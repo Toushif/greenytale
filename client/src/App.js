@@ -25,12 +25,11 @@ const Main = (props) => {
     const { userDetails } = useContext(AuthContext);
     const context = useContext(AuthContext);
     let roles = [3];
-
+    
     if (userDetails && userDetails.role) {
         const store = userDetails.role
             .filter((v) => v.ActiveStatus)
             .map((v) => v.RoleID);
-            
         roles = [...new Set([...roles, ...store])];
     }
 
