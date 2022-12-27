@@ -9,6 +9,7 @@ import Footer from "views/footer/index";
 import AuthContextProvider from "context/authContext";
 import { AuthContext } from "context/authContext";
 import "./App.scss";
+
 import "styles/common.scss";
 
 const Login = lazy(() => import("views/login/index"));
