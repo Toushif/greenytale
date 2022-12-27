@@ -12,7 +12,6 @@ import "./App.scss";
 import "styles/common.scss";
 
 const Login = lazy(() => import("views/login/index"));
-
 const Profile = lazy(() => import("views/profile/index"));
 const Product = lazy(() => import("views/product/index"));
 const WatsonDiscovery = lazy(() => import("views/watson-discovery/index"));
