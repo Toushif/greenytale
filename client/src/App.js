@@ -23,6 +23,7 @@ const Cart = lazy(() => import("views/cart/index"));
 
 const Main = (props) => {
     const { userDetails } = useContext(AuthContext);
+    
     const context = useContext(AuthContext);
     let roles = [3];
     
