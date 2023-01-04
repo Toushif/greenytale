@@ -35,7 +35,6 @@ const Main = (props) => {
 
     return (
         <div className="App">
-            
             {!location.pathname.includes("login") && (
                 <Header 
                     {...props}
