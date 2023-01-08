@@ -21,11 +21,11 @@ const Seller = lazy(() => import("views/seller/index"));
 const SellerUpload = lazy(() => import("views/product-upload/index"));
 const Cart = lazy(() => import("views/cart/index"));
 
+
 const Main = (props) => {
     const { userDetails } = useContext(AuthContext);
     const context = useContext(AuthContext);
     let roles = [3];
-    
     
     if (userDetails && userDetails.role) {
         const store = userDetails.role
