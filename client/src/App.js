@@ -30,7 +30,6 @@ const Main = (props) => {
         const store = userDetails.role
             .filter((v) => v.ActiveStatus)
             .map((v) => v.RoleID);
-            
         roles = [...new Set([...roles, ...store])];
     }
 
