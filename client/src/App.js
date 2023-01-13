@@ -39,7 +39,6 @@ const Main = (props) => {
                 <Header 
                     {...props}
                     context={context} 
-                    
                 />
             )}
             <Switch>
