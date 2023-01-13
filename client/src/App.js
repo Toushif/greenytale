@@ -41,6 +41,7 @@ const Main = (props) => {
                     context={context} 
                 />
             )}
+            
             <Switch>
                 <Route
                     exact={true}
