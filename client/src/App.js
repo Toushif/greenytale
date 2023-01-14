@@ -45,7 +45,6 @@ const Main = (props) => {
                 <Route
                     exact={true}
                     path="/"
-                    
                     render={(prop) => (
                         <PrivateRoute
                             {...prop}
