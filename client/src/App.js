@@ -38,7 +38,6 @@ const Main = (props) => {
             {!location.pathname.includes("login") && (
                 <Header 
                     {...props}
-                    
                     context={context} 
                 />
             )}
