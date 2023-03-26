@@ -33,7 +33,6 @@ const Main = (props) => {
         roles = [...new Set([...roles, ...store])];
     }
 
-
     return (
         <div className="App">
             {!location.pathname.includes("login") && (
