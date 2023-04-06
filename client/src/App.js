@@ -32,7 +32,6 @@ const Main = (props) => {
             .map((v) => v.RoleID);
         roles = [...new Set([...roles, ...store])];
     }
-    
 
     return (
         <div className="App">
